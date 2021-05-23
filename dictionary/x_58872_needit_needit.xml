@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Information Technology" sequence="3" value="IT"/>
+                <element inactive_on_update="false" label="Enterprise Applications" sequence="4" value="EA"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legalad" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="FMLA Form" sequence="0" value="fmla"/>
+                <element inactive_on_update="false" label="Employment Letter" sequence="1" value="employment"/>
+                <element inactive_on_update="false" label="Visa Reference Letter" sequence="2" value="visa"/>
+                <element inactive_on_update="false" label="New ID Card" sequence="3" value="newid"/>
+                <element inactive_on_update="false" label="Replacement ID Card" sequence="4" value="replaid"/>
+                <element inactive_on_update="false" label="Legal Advice" sequence="5" value="legalad"/>
+                <element inactive_on_update="false" label="Response Time" sequence="6" value="response"/>
+                <element inactive_on_update="false" label="Member Portal" sequence="7" value="portal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
